@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Show a Color Picker</h2>
+
+<p>The <strong>input type="color"</strong> is used for input fields that should contain a color.</p>
+
+<!--The <input type="color"> is used for input fields that should contain a color-->
+
+<form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  <input type="submit" value="Submit">
+</form>
+
+<p><b>Note:</b> type="color" is not supported in Internet Explorer 11 or Safari 9.1 (or earlier).</p><br/><br/>
+
+<!--The <input type="date"> is used for input fields that should contain a date.-->
+
+<form>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday">
+</form> <br/><br/>
+
+<!--You can also use the min and max attributes to add restrictions to dates-->
+<form>
+    <label for="datemax">Enter a date before 1980-01-01:</label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+    <label for="datemin">Enter a date after 2000-01-01:</label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02">
+</form> <br/><br/>
+
+<!--The <input type="datetime-local"> specifies a date and time input field, with no time zone-->
+<form>
+    <label for="birthdaytime">Birthday (date and time):</label>
+    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+</form><br/><br/>
+
+<!--The <input type="image"> defines an image as a submit button.-->
+<form>
+    <input type="image" src="image.jpg" alt="Submit" width="48" height="48">
+</form><br/><br/> 
+<!--The <input type="file"> defines a file-select field and a "Browse" button for file uploads-->
+<form>
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="myfile">
+</form><br/><br/>
+
+<!--The <input type="hidden"> defines a hidden input field (not visible to a user)-->
+<form>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="hidden" id="custId" name="custId" value="3487">
+    <input type="submit" value="Submit">
+</form><br/><br/>
+
+<!--
+    The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control). 
+    Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes
+-->
+<form>
+    <label for="vol">Volume (between 0 and 50):</label>
+    <input type="range" id="vol" name="vol" min="0" max="50">
+</form><br/><br/>
+
+<!--The <input type="search"> is used for search fields (a search field behaves like a regular text field).-->
+<form>
+    <label for="gsearch">Search Google:</label>
+    <input type="search" id="gsearch" name="gsearch">
+</form> <br/><br/>
+
+<!--The <input type="tel"> is used for input fields that should contain a telephone number.-->
+<form>
+    <label>Enter your phone number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+</form> <br/>
+
+<!--The <input type="time"> allows the user to select a time (no time zone) -->
+<form>
+    <label>Select a time:</label>
+    <input type="time" id="appt" name="appt">
+</form><br/> 
+
+<!--
+    The <input type="url"> is used for input fields that should contain a URL address.
+    Depending on browser support, the url field can be automatically validated when submitted.
+    Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input
+-->
+<form>
+    <label>Add your homepage:</label>
+    <input type="url" id="homepage" name="homepage">
+</form><br/> 
+
+<!-- The <input type="week"> allows the user to select a week and year -->
+<form>
+    <label>Select a week:</label>
+    <input type="week" id="week" name="week">
+</form> 
+<br/>
+
+
+</body>
+</html>
