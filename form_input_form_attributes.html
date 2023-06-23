@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input formaction attribute</h1>
+
+<p>The formaction attribute specifies the URL of a file that will process the input when the form is submitted.</p>
+<!--
+    The input formaction attribute specifies the URL of the file that will process the input when the form is submitted.
+    Note: This attribute overrides the action attribute of the <form> element
+-->
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form><br/><br/>
+
+<!--
+    The input formenctype attribute specifies how the form-data should be encoded when submitted (only for forms with method="post").
+    Note: This attribute overrides the enctype attribute of the <form> element.
+-->
+<form action="/action_page_binary.asp" method="post">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="submit" value="Submit">
+<input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form> 
+<br/><br/>
+
+
+<!--
+   The input formmethod attribute defines the HTTP method for sending form-data to the action URL.
+    Note: This attribute overrides the method attribute of the <form> element. 
+-->
+<!--
+    Notes on the "get" method:
+
+    This method appends the form-data to the URL in name/value pairs
+    This method is useful for form submissions where a user want to bookmark the result
+    There is a limit to how much data you can place in a URL (varies between browsers), therefore, you cannot be sure that all of the form-data will be correctly transferred
+    Never use the "get" method to pass sensitive information! (password or other sensitive information will be visible in the browser's address bar)
+
+-->
+<!--
+    Notes on the "post" method:
+
+    This method sends the form-data as an HTTP post transaction
+    Form submissions with the "post" method cannot be bookmarked
+    The "post" method is more robust and secure than "get", and "post" does not have size limitations
+
+-->
+<form action="/action_page.php" method="get">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<input type="submit" value="Submit using GET">
+<input type="submit" formmethod="post" value="Submit using POST">
+</form> 
+<br/><br/>
+
+<form action="/action_page.php">
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<input type="submit" value="Submit">
+<input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+</form> 
+<br/><br/>
+
+
+<!--
+    The input formnovalidate attribute specifies that an <input> element should not be validated when submitted.
+    Note: This attribute overrides the novalidate attribute of the <form> element.
+-->
+<form action="/action_page.php">
+<label for="email">Enter your email:</label>
+<input type="email" id="email" name="email"><br><br>
+<input type="submit" value="Submit">
+<input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+</form> 
+<br/><br/>
+
+<!--
+    The novalidate attribute is a <form> attribute.
+    When present, novalidate specifies that all of the form-data should not be validated when submitted.
+-->
+<form action="/action_page.php" novalidate>
+<label for="email">Enter your email:</label>
+<input type="email" id="email" name="email"><br><br>
+<input type="submit" value="Submit">
+</form> 
+<br/><br/>
+
+</body>
+</html>
+
